@@ -117,7 +117,7 @@ impl TsType {
                 nanos_since_epoch: Self::NUMBER;
             },
 
-            "Range" | "RangeInclusive" => {
+            "Range" | "RangeInclusive" if args.len() == 1 => {
                 let start = Self::from_syn_type(config, args[0]);
                 let end = start.clone();
 
