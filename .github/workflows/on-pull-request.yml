@@ -56,6 +56,9 @@ jobs:
             - name: Add cargo-expand
               run: cargo install cargo-expand
 
+            - name: Check Node.js version
+              run: node --version
+
             # Run the ./test.sh script
             - name: Test
               run: ./test.sh
